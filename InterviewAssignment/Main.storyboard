@@ -259,9 +259,14 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8EQ-Hn-W9P">
                                                 <rect key="frame" x="22" y="610.33333333333337" width="876.66666666666663" height="34"/>
                                                 <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downward-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="i1n-FR-fY8">
+                                                        <rect key="frame" x="840.66666666666663" y="0.0" width="34" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="i1n-FR-fY8" secondAttribute="height" multiplier="1:1" id="So6-ul-gJj"/>
+                                                        </constraints>
+                                                    </imageView>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1d-WJ-L6A">
                                                         <rect key="frame" x="0.0" y="0.0" width="876.66666666666663" height="34"/>
-                                                        <state key="normal" image="downward-arrow"/>
                                                         <connections>
                                                             <action selector="categoryDropdownButtonClicked:" destination="UDT-9U-Sbg" eventType="touchUpInside" id="Ifx-Kg-vjQ"/>
                                                         </connections>
@@ -276,9 +281,12 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="fej-Pb-T8L" firstAttribute="top" secondItem="8EQ-Hn-W9P" secondAttribute="top" id="2c3-1Q-R6T"/>
+                                                    <constraint firstItem="i1n-FR-fY8" firstAttribute="top" secondItem="8EQ-Hn-W9P" secondAttribute="top" id="4Hg-rY-9Kk"/>
                                                     <constraint firstAttribute="trailing" secondItem="H1d-WJ-L6A" secondAttribute="trailing" id="8eQ-yG-aXN"/>
                                                     <constraint firstItem="H1d-WJ-L6A" firstAttribute="leading" secondItem="8EQ-Hn-W9P" secondAttribute="leading" id="Psa-av-BHh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="i1n-FR-fY8" secondAttribute="trailing" constant="2" id="Qn2-ki-RrW"/>
                                                     <constraint firstAttribute="bottom" secondItem="H1d-WJ-L6A" secondAttribute="bottom" id="Y1Y-Wo-vNf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="i1n-FR-fY8" secondAttribute="bottom" id="cyC-St-MZ7"/>
                                                     <constraint firstAttribute="trailing" secondItem="fej-Pb-T8L" secondAttribute="trailing" constant="36" id="m77-Oe-ffK"/>
                                                     <constraint firstAttribute="bottom" secondItem="fej-Pb-T8L" secondAttribute="bottom" id="pfx-YK-XmZ"/>
                                                     <constraint firstItem="fej-Pb-T8L" firstAttribute="leading" secondItem="8EQ-Hn-W9P" secondAttribute="leading" id="sYg-Pp-5Pc"/>

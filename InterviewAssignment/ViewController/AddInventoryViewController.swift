@@ -47,9 +47,9 @@ class AddInventoryViewController: UIViewController {
     
     func setNavBarBackButton(){
         
-        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "barBackButton")
-        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "barBackButton")
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+//        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "barBackButton")
+//        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "barBackButton")
+//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
     }
     
     func tapGestureToDismissKeyboard() {
@@ -144,7 +144,7 @@ class AddInventoryViewController: UIViewController {
         dropDown.show()
         dropDown.selectionAction = { [weak self] (index: Int, item: String) in
             guard let _ = self else { return }
-            sender.setTitle(item, for: .normal)
+//            sender.setTitle(item, for: .normal)
             self!.categoryTextLabel.text = item
         }
     }
