@@ -214,7 +214,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="928"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aew-CF-WAu">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aew-CF-WAu" customClass="TPKeyboardAvoidingScrollView">
                                 <rect key="frame" x="0.0" y="88" width="428" height="806"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gt-hl-pv6">
@@ -271,8 +271,8 @@
                                                             <action selector="categoryDropdownButtonClicked:" destination="UDT-9U-Sbg" eventType="touchUpInside" id="Ifx-Kg-vjQ"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fej-Pb-T8L">
-                                                        <rect key="frame" x="0.0" y="0.0" width="304" height="34"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fej-Pb-T8L">
+                                                        <rect key="frame" x="8" y="0.0" width="296" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -289,7 +289,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="i1n-FR-fY8" secondAttribute="bottom" id="cyC-St-MZ7"/>
                                                     <constraint firstAttribute="trailing" secondItem="fej-Pb-T8L" secondAttribute="trailing" constant="36" id="m77-Oe-ffK"/>
                                                     <constraint firstAttribute="bottom" secondItem="fej-Pb-T8L" secondAttribute="bottom" id="pfx-YK-XmZ"/>
-                                                    <constraint firstItem="fej-Pb-T8L" firstAttribute="leading" secondItem="8EQ-Hn-W9P" secondAttribute="leading" id="sYg-Pp-5Pc"/>
+                                                    <constraint firstItem="fej-Pb-T8L" firstAttribute="leading" secondItem="8EQ-Hn-W9P" secondAttribute="leading" constant="8" id="sYg-Pp-5Pc"/>
                                                     <constraint firstItem="H1d-WJ-L6A" firstAttribute="top" secondItem="8EQ-Hn-W9P" secondAttribute="top" id="tpq-MI-Iq9"/>
                                                 </constraints>
                                             </view>
@@ -348,7 +348,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="Sef-Wv-UuB" secondAttribute="bottom" constant="7" id="xfR-Ut-ik3"/>
                                                 </constraints>
                                             </view>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1Iv-wQ-oxi">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1Iv-wQ-oxi" customClass="Tp">
                                                 <rect key="frame" x="22" y="441" width="340" height="70"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -359,7 +359,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                             </textView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2b3-fy-AzP">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2b3-fy-AzP">
                                                 <rect key="frame" x="22" y="360" width="340" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>

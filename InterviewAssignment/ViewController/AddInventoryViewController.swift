@@ -40,7 +40,7 @@ class AddInventoryViewController: UIViewController {
         priceTextField.delegate = self
         quantityTextField.delegate = self
 
-        getWSCAll(url: Constants.categoryUrl)
+        getCategoriesFromServer(url: Constants.categoryUrl)
         setUI()
         setNavBarBackButton()
         tapGestureToDismissKeyboard()
@@ -94,7 +94,7 @@ class AddInventoryViewController: UIViewController {
         
     }
     
-    func getWSCAll(url: String){
+    func getCategoriesFromServer(url: String){
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = "GET"
         request.url = URL(string: url)
@@ -126,10 +126,13 @@ class AddInventoryViewController: UIViewController {
     
     
     @IBAction func addImageButtonClicked(_ sender: Any) {
+        self.view.endEditing(true)
+
     }
     
     @IBAction func addForSaleButtonClicked(_ sender: Any) {
-        
+        self.view.endEditing(true)
+
         if flagSale {
             flagSale = false
             addForSaleButton.setImage(UIImage(named: "circle.png"), for: UIControl.State.normal)
@@ -141,6 +144,8 @@ class AddInventoryViewController: UIViewController {
     }
     
     @IBAction func addForRentButtonClicked(_ sender: Any) {
+        self.view.endEditing(true)
+
         if flagRent {
             flagRent = false
             addForRentButton.setImage(UIImage(named: "circle.png"), for: UIControl.State.normal)
@@ -152,6 +157,8 @@ class AddInventoryViewController: UIViewController {
     }
     
     @IBAction func categoryDropdownButtonClicked(_ sender: UIButton) {
+        self.view.endEditing(true)
+        
         //        dropDown.dataSource = categories
         dropDown.anchorView = sender
         dropDown.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height)
@@ -164,6 +171,7 @@ class AddInventoryViewController: UIViewController {
     }
     
     @IBAction func addNewInventoryClicked(_ sender: Any) {
+        self.view.endEditing(true)
         // web service call
     }
     
