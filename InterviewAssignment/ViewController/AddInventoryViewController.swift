@@ -25,6 +25,8 @@ class AddInventoryViewController: UIViewController {
     @IBOutlet weak var addForSaleButton: UIButton!
     @IBOutlet weak var addForRentButton: UIButton!
     
+    @IBOutlet weak var addNewInventoryButton: UIButton!
+    
     let dropDown = DropDown()
     var flagSale:Bool = false
     var flagRent:Bool = false
@@ -47,9 +49,20 @@ class AddInventoryViewController: UIViewController {
     
     func setNavBarBackButton(){
         
+        let button = UIButton(type: UIButton.ButtonType.custom)
+        button.setImage(UIImage(named: "barBackButton"), for: .normal)
+        button.addTarget(self, action:#selector(navigateBack), for: .touchDown)
+        button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        let barButton = UIBarButtonItem(customView: button)
+        self.navigationItem.leftBarButtonItems = [barButton]
+        
 //        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "barBackButton")
 //        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "barBackButton")
 //        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+    }
+    
+    @objc func navigateBack(){
+        navigationController?.popToRootViewController(animated: true)
     }
     
     func tapGestureToDismissKeyboard() {
@@ -70,10 +83,15 @@ class AddInventoryViewController: UIViewController {
         prodImageView.layer.cornerRadius = 10 // Constants.VIEW_CORNER_RADIUS
         prodImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         addImageButton.layer.cornerRadius = 5
-        
+        addNewInventoryButton.layer.cornerRadius = CGFloat(Constants.BUTTON_CORNER_RADIUS)
         inventoryTitleTextField.useUnderline()
         priceTextField.useUnderline()
         quantityTextField.useUnderline()
+        
+        descriptionTextView.layer.borderWidth = 1
+        descriptionTextView.layer.borderColor = UIColor.systemGray3.cgColor
+        descriptionTextView.layer.cornerRadius = CGFloat(Constants.BUTTON_CORNER_RADIUS)
+        
     }
     
     func getWSCAll(url: String){
@@ -119,9 +137,7 @@ class AddInventoryViewController: UIViewController {
             flagSale = true
             addForSaleButton.setImage(UIImage(named: "circle-fill.png"), for: UIControl.State.normal)
         }
-        
         addForSaleButton.imageView?.contentMode = .scaleAspectFit
-        
     }
     
     @IBAction func addForRentButtonClicked(_ sender: Any) {
@@ -132,10 +148,8 @@ class AddInventoryViewController: UIViewController {
             flagRent = true
             addForRentButton.setImage(UIImage(named: "circle-fill.png"), for: UIControl.State.normal)
         }
-        
         addForRentButton.imageView?.contentMode = .scaleAspectFit
     }
-    
     
     @IBAction func categoryDropdownButtonClicked(_ sender: UIButton) {
         //        dropDown.dataSource = categories
