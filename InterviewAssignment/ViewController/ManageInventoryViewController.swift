@@ -82,7 +82,7 @@ extension ManageInventoryViewController: UITableViewDataSource  {
 
         let cell:manageInventoryTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! manageInventoryTableViewCell
         cell.titleLabel.text = inventoryArray[indexPath.row].title
-        cell.priceLabel.text = String(inventoryArray[indexPath.row].price)
+        cell.priceLabel.text = "$" + String(inventoryArray[indexPath.row].price) + " CAD"
         cell.productImageView.imageFromUrl(urlString: inventoryArray[indexPath.row].image)
         
         return cell

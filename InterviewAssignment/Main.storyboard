@@ -18,7 +18,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mB0-MZ-ZGL">
                                 <rect key="frame" x="56" y="100" width="316" height="43"/>
-                                <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96690398450000004" green="0.18747496599999999" blue="0.67010980840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mB0-MZ-ZGL" secondAttribute="height" multiplier="302:41" id="CYH-Bx-RjE"/>
                                 </constraints>
@@ -99,6 +99,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Dkj-ul-Nfg" secondAttribute="height" multiplier="160:53" id="uTs-KI-OCF"/>
                                                             </constraints>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <state key="normal" image="trash" catalog="system">
                                                                 <attributedString key="attributedTitle">
                                                                     <fragment content="  Delete">
@@ -272,7 +273,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fej-Pb-T8L">
-                                                        <rect key="frame" x="8" y="0.0" width="296" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="304" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -289,7 +290,7 @@
                                                     <constraint firstAttribute="bottom" secondItem="i1n-FR-fY8" secondAttribute="bottom" id="cyC-St-MZ7"/>
                                                     <constraint firstAttribute="trailing" secondItem="fej-Pb-T8L" secondAttribute="trailing" constant="36" id="m77-Oe-ffK"/>
                                                     <constraint firstAttribute="bottom" secondItem="fej-Pb-T8L" secondAttribute="bottom" id="pfx-YK-XmZ"/>
-                                                    <constraint firstItem="fej-Pb-T8L" firstAttribute="leading" secondItem="8EQ-Hn-W9P" secondAttribute="leading" constant="8" id="sYg-Pp-5Pc"/>
+                                                    <constraint firstItem="fej-Pb-T8L" firstAttribute="leading" secondItem="8EQ-Hn-W9P" secondAttribute="leading" id="sYg-Pp-5Pc"/>
                                                     <constraint firstItem="H1d-WJ-L6A" firstAttribute="top" secondItem="8EQ-Hn-W9P" secondAttribute="top" id="tpq-MI-Iq9"/>
                                                 </constraints>
                                             </view>
@@ -504,7 +505,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjM-HE-YqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632" y="-810"/>
+            <point key="canvasLocation" x="1602" y="51"/>
         </scene>
     </scenes>
     <resources>
