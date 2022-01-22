@@ -24,6 +24,7 @@
 		A2B98FFF27959E5A0050D782 /* manageInventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98FFE27959E5A0050D782 /* manageInventoryTableViewCell.swift */; };
 		A2E60A35279BB86A00AF8C0D /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E60A33279BB86900AF8C0D /* TPKeyboardAvoidingScrollView.m */; };
 		A2E60A3B279BB94200AF8C0D /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E60A3A279BB94200AF8C0D /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		A2E60A4B279BBF9400AF8C0D /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E60A4A279BBF9400AF8C0D /* UIImage.swift */; };
 		CF32D0BDB72EA6D15EF49443 /* Pods_InterviewAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFCA4800A7C3C430CB46A20 /* Pods_InterviewAssignmentTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		A2E60A34279BB86900AF8C0D /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
 		A2E60A39279BB94200AF8C0D /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		A2E60A3A279BB94200AF8C0D /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		A2E60A4A279BBF9400AF8C0D /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		AE144285BFD8367C9AD6CE46 /* Pods-InterviewAssignment-InterviewAssignmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewAssignment-InterviewAssignmentUITests.release.xcconfig"; path = "Target Support Files/Pods-InterviewAssignment-InterviewAssignmentUITests/Pods-InterviewAssignment-InterviewAssignmentUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D4AAD30B73F31E414982A2A0 /* Pods-InterviewAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewAssignment.release.xcconfig"; path = "Target Support Files/Pods-InterviewAssignment/Pods-InterviewAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		E5F75B260B7E14E0168DC580 /* Pods_InterviewAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterviewAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +203,7 @@
 		A2B98FE027959DA90050D782 /* CommonUtil */ = {
 			isa = PBXGroup;
 			children = (
+				A2E60A49279BBF7F00AF8C0D /* Extensions */,
 				A2E60A31279BB7C700AF8C0D /* TPKeyboardAvoiding */,
 				A2B98FE927959DF00050D782 /* Constant.swift */,
 			);
@@ -241,6 +244,14 @@
 				A2E60A32279BB86900AF8C0D /* InterviewAssignment-Bridging-Header.h */,
 			);
 			path = TPKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
+		A2E60A49279BBF7F00AF8C0D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A2E60A4A279BBF9400AF8C0D /* UIImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2B98FC927959C9A0050D782 /* ManageInventoryViewController.swift in Sources */,
+				A2E60A4B279BBF9400AF8C0D /* UIImage.swift in Sources */,
 				A2B98F7A27959A8B0050D782 /* AppDelegate.swift in Sources */,
 				A2B98FD127959CB90050D782 /* AddInventoryViewController.swift in Sources */,
 				A2B98FFF27959E5A0050D782 /* manageInventoryTableViewCell.swift in Sources */,

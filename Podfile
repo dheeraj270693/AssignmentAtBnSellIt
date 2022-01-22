@@ -7,7 +7,6 @@ target 'InterviewAssignment' do
 
   # Pods for InterviewAssignment
     pod 'DropDown'
-  	pod 'Kingfisher'
 
   target 'InterviewAssignmentTests' do
     inherit! :search_paths

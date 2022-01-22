@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class ManageInventoryViewController: UIViewController  {
     
@@ -32,8 +31,6 @@ class ManageInventoryViewController: UIViewController  {
     }
     
     @IBAction func addNewInventoryBtnClicked(_ sender: Any) {
-        //        let conn = ConnectionHelper()
-        //        conn.getInventoryData()
     }
     
     func getInventoriesWSCAll(url: String){
@@ -67,42 +64,28 @@ class ManageInventoryViewController: UIViewController  {
                     let description = object["description"] as? String ?? "N/A"
                     let image = object["image"] as? String ?? "N/A"
                     
-                    // Save data using your Model
+                    // Save data
                     inventoryArray.append(InventoryModel.init(id: id, qty: qty, price: price, squ: squ, title: title, description: description, image: image))
                 }
-            } // end of For loop
+            }
             print("Array:: \(inventoryArray)")
-            // Reload data of TableView/CollectionView
             DispatchQueue.main.async { [self] in
                 tableView.reloadData()
             }
         }
     }
-    
-    /*
-     // MARK: - Navigation
-     #imageLiteral(resourceName: "simulator_screenshot_59AF1610-0391-41D3-9CD6-5A19941014CD.png")
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
 
 extension ManageInventoryViewController: UITableViewDataSource  {
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // create a new cell if needed or reuse an old one
+
         let cell:manageInventoryTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! manageInventoryTableViewCell
         cell.titleLabel.text = inventoryArray[indexPath.row].title
         cell.priceLabel.text = String(inventoryArray[indexPath.row].price)
-        cell.productImageView.image = UIImage(named: inventoryArray[indexPath.row].image) ?? UIImage(named: "productImage")
+        cell.productImageView.imageFromUrl(urlString: inventoryArray[indexPath.row].image)
         
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -130,3 +113,6 @@ extension ManageInventoryViewController: UITableViewDelegate {
         //        navigationController?.pushViewController(addVC, animated: true)
     }
 }
+
+
+
