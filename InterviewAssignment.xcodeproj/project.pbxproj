@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		48A21B0E60AAEA499F1E9DBF /* Pods_InterviewAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F75B260B7E14E0168DC580 /* Pods_InterviewAssignment.framework */; };
 		76A2F66179FA9E1D0B2394A3 /* Pods_InterviewAssignment_InterviewAssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8EFA78965F3D3616E11BEE /* Pods_InterviewAssignment_InterviewAssignmentUITests.framework */; };
+		A252F9B4279D236700E09196 /* BnSellIt_Assignment.mov in Resources */ = {isa = PBXBuildFile; fileRef = A252F9B3279D236700E09196 /* BnSellIt_Assignment.mov */; };
 		A2A052F1279C611400D18D2F /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A052F0279C611400D18D2F /* UITextField.swift */; };
 		A2B98F7A27959A8B0050D782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F7927959A8B0050D782 /* AppDelegate.swift */; };
 		A2B98F7C27959A8B0050D782 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F7B27959A8B0050D782 /* SceneDelegate.swift */; };
@@ -53,6 +54,7 @@
 		3F8270EB9B235912097749BF /* Pods-InterviewAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewAssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-InterviewAssignmentTests/Pods-InterviewAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		42EF826667AC732FC0CAD9D0 /* Pods-InterviewAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewAssignment.debug.xcconfig"; path = "Target Support Files/Pods-InterviewAssignment/Pods-InterviewAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		6F0E1128C5CC6E973D68B08C /* Pods-InterviewAssignment-InterviewAssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewAssignment-InterviewAssignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-InterviewAssignment-InterviewAssignmentUITests/Pods-InterviewAssignment-InterviewAssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A252F9B3279D236700E09196 /* BnSellIt_Assignment.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = BnSellIt_Assignment.mov; sourceTree = "<group>"; };
 		A2A052F0279C611400D18D2F /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		A2B98F7627959A8B0050D782 /* InterviewAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B98F7927959A8B0050D782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A252F9B2279D22C400E09196 /* Video output */ = {
+			isa = PBXGroup;
+			children = (
+				A252F9B3279D236700E09196 /* BnSellIt_Assignment.mov */,
+			);
+			path = "Video output";
+			sourceTree = "<group>";
+		};
 		A2B98F6D27959A8B0050D782 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +170,7 @@
 		A2B98F7827959A8B0050D782 /* InterviewAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				A252F9B2279D22C400E09196 /* Video output */,
 				A2B98FFD27959E440050D782 /* CustomCell */,
 				A2B98FF727959E2A0050D782 /* Model */,
 				A2B98FF127959E050050D782 /* ConnectionManager */,
@@ -366,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A252F9B4279D236700E09196 /* BnSellIt_Assignment.mov in Resources */,
 				A2B98FB027959AB90050D782 /* Main.storyboard in Resources */,
 				A2B98F8627959A8D0050D782 /* LaunchScreen.storyboard in Resources */,
 				A2B98F8327959A8D0050D782 /* Assets.xcassets in Resources */,

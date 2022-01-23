@@ -260,6 +260,10 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8EQ-Hn-W9P">
                                                 <rect key="frame" x="22" y="279" width="340" height="34"/>
                                                 <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bI-uQ-Ej4">
+                                                        <rect key="frame" x="0.0" y="33" width="340" height="1"/>
+                                                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                                    </view>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downward-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="i1n-FR-fY8">
                                                         <rect key="frame" x="304" y="0.0" width="34" height="34"/>
                                                         <constraints>
@@ -286,9 +290,13 @@
                                                     <constraint firstAttribute="trailing" secondItem="H1d-WJ-L6A" secondAttribute="trailing" id="8eQ-yG-aXN"/>
                                                     <constraint firstItem="H1d-WJ-L6A" firstAttribute="leading" secondItem="8EQ-Hn-W9P" secondAttribute="leading" id="Psa-av-BHh"/>
                                                     <constraint firstAttribute="trailing" secondItem="i1n-FR-fY8" secondAttribute="trailing" constant="2" id="Qn2-ki-RrW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4bI-uQ-Ej4" secondAttribute="trailing" id="U2I-jp-hZO"/>
                                                     <constraint firstAttribute="bottom" secondItem="H1d-WJ-L6A" secondAttribute="bottom" id="Y1Y-Wo-vNf"/>
                                                     <constraint firstAttribute="bottom" secondItem="i1n-FR-fY8" secondAttribute="bottom" id="cyC-St-MZ7"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4bI-uQ-Ej4" secondAttribute="bottom" id="jbT-Vv-ASc"/>
                                                     <constraint firstAttribute="trailing" secondItem="fej-Pb-T8L" secondAttribute="trailing" constant="36" id="m77-Oe-ffK"/>
+                                                    <constraint firstItem="4bI-uQ-Ej4" firstAttribute="height" secondItem="8EQ-Hn-W9P" secondAttribute="height" multiplier="0.0294118" id="mGw-Xf-jjx"/>
+                                                    <constraint firstItem="4bI-uQ-Ej4" firstAttribute="leading" secondItem="8EQ-Hn-W9P" secondAttribute="leading" id="o5X-oT-F4h"/>
                                                     <constraint firstAttribute="bottom" secondItem="fej-Pb-T8L" secondAttribute="bottom" id="pfx-YK-XmZ"/>
                                                     <constraint firstItem="fej-Pb-T8L" firstAttribute="leading" secondItem="8EQ-Hn-W9P" secondAttribute="leading" id="sYg-Pp-5Pc"/>
                                                     <constraint firstItem="H1d-WJ-L6A" firstAttribute="top" secondItem="8EQ-Hn-W9P" secondAttribute="top" id="tpq-MI-Iq9"/>
@@ -349,15 +357,20 @@
                                                     <constraint firstAttribute="bottom" secondItem="Sef-Wv-UuB" secondAttribute="bottom" constant="7" id="xfR-Ut-ik3"/>
                                                 </constraints>
                                             </view>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1Iv-wQ-oxi" customClass="Tp">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Iv-wQ-oxi" customClass="Tp">
                                                 <rect key="frame" x="22" y="441" width="340" height="70"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="1Iv-wQ-oxi" secondAttribute="height" multiplier="34:7" id="x87-5v-nXt"/>
                                                 </constraints>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna.</string>
-                                                <color key="textColor" systemColor="labelColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Please enter the detail description of inventory.">
+                                                        <attributes>
+                                                            <font key="NSFont" metaFont="toolTip"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                             </textView>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2b3-fy-AzP">
@@ -515,9 +528,6 @@
         <image name="downward-arrow" width="32" height="32"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="trash" catalog="system" width="121" height="128"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
