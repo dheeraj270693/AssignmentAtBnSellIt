@@ -13,18 +13,14 @@ class AddInventoryViewController: UIViewController {
     @IBOutlet weak var curvedView: UIView!
     @IBOutlet weak var prodImageView: UIImageView!
     @IBOutlet weak var addImageButton: UIButton!
-    
-    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var categoryView: UIView!
     @IBOutlet weak var categoryTextLabel: UILabel!
     @IBOutlet weak var inventoryTitleTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
-    
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var quantityTextField: UITextField!
-    
     @IBOutlet weak var addForSaleButton: UIButton!
     @IBOutlet weak var addForRentButton: UIButton!
-    
     @IBOutlet weak var addNewInventoryButton: UIButton!
     
     let dropDown = DropDown()
@@ -32,36 +28,53 @@ class AddInventoryViewController: UIViewController {
     var flagRent:Bool = false
     var categoryArray : [String] = []
     
+    var productImage = ""
+    var inventoryTitle = ""
+    var desc = ""
+    var price = ""
+    var qty = ""
+    var isSelected : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         inventoryTitleTextField.delegate = self
         descriptionTextView.delegate = self
         priceTextField.delegate = self
         quantityTextField.delegate = self
-
+        
         getCategoriesFromServer(url: Constants.categoryUrl)
         setUI()
         setNavBarBackButton()
+        setInventoryDetailFromManageVC()
         tapGestureToDismissKeyboard()
+    }
+    
+    func setInventoryDetailFromManageVC() {
         
+        if(isSelected){
+            addImageButton.isHidden = true
+            prodImageView.imageFromUrl(urlString: productImage)
+            inventoryTitleTextField.text = inventoryTitle
+            descriptionTextView.text = desc
+            priceTextField.text = price
+            quantityTextField.text = qty
+        }
+        else{
+            addImageButton.isHidden = false
+        }
     }
     
     func setNavBarBackButton(){
-        
         let button = UIButton(type: UIButton.ButtonType.custom)
         button.setImage(UIImage(named: "barBackButton"), for: .normal)
-        button.addTarget(self, action:#selector(navigateBack), for: .touchDown)
+        button.addTarget(self, action:#selector(navigateBackToRoot), for: .touchDown)
         button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         let barButton = UIBarButtonItem(customView: button)
         self.navigationItem.leftBarButtonItems = [barButton]
-        
-//        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "barBackButton")
-//        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "barBackButton")
-//        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
     }
     
-    @objc func navigateBack(){
+    @objc func navigateBackToRoot(){
         navigationController?.popToRootViewController(animated: true)
     }
     
@@ -78,9 +91,9 @@ class AddInventoryViewController: UIViewController {
     }
     
     func setUI(){
-        curvedView.layer.cornerRadius = 8 //Constants.BUTTON_CORNER_RADIUS
+        curvedView.layer.cornerRadius = CGFloat(Constants.BUTTON_CORNER_RADIUS)
         prodImageView.layer.masksToBounds = true
-        prodImageView.layer.cornerRadius = 10 // Constants.VIEW_CORNER_RADIUS
+        prodImageView.layer.cornerRadius = CGFloat(Constants.VIEW_CORNER_RADIUS)
         prodImageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         addImageButton.layer.cornerRadius = 5
         addNewInventoryButton.layer.cornerRadius = CGFloat(Constants.BUTTON_CORNER_RADIUS)
@@ -91,7 +104,6 @@ class AddInventoryViewController: UIViewController {
         descriptionTextView.layer.borderWidth = 1
         descriptionTextView.layer.borderColor = UIColor.systemGray3.cgColor
         descriptionTextView.layer.cornerRadius = CGFloat(Constants.BUTTON_CORNER_RADIUS)
-        
     }
     
     func getCategoriesFromServer(url: String){
@@ -100,7 +112,6 @@ class AddInventoryViewController: UIViewController {
         request.url = URL(string: url)
         
         let task1 = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error -> Void in
-            
             if(data != nil && data?.count != 0)
             {
                 self.parseJson2(data: data!)
@@ -127,12 +138,11 @@ class AddInventoryViewController: UIViewController {
     
     @IBAction func addImageButtonClicked(_ sender: Any) {
         self.view.endEditing(true)
-
     }
     
     @IBAction func addForSaleButtonClicked(_ sender: Any) {
         self.view.endEditing(true)
-
+        
         if flagSale {
             flagSale = false
             addForSaleButton.setImage(UIImage(named: "circle.png"), for: UIControl.State.normal)
@@ -145,7 +155,7 @@ class AddInventoryViewController: UIViewController {
     
     @IBAction func addForRentButtonClicked(_ sender: Any) {
         self.view.endEditing(true)
-
+        
         if flagRent {
             flagRent = false
             addForRentButton.setImage(UIImage(named: "circle.png"), for: UIControl.State.normal)
@@ -165,7 +175,7 @@ class AddInventoryViewController: UIViewController {
         dropDown.show()
         dropDown.selectionAction = { [weak self] (index: Int, item: String) in
             guard let _ = self else { return }
-//            sender.setTitle(item, for: .normal)
+            //            sender.setTitle(item, for: .normal)
             self!.categoryTextLabel.text = item
         }
     }
@@ -174,9 +184,7 @@ class AddInventoryViewController: UIViewController {
         self.view.endEditing(true)
         // web service call
     }
-    
 }
-
 
 extension UIViewController: UITextFieldDelegate, UITextViewDelegate {
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -190,20 +198,6 @@ extension UIViewController: UITextFieldDelegate, UITextViewDelegate {
             return false
         }
         return true
-    }
-}
-
-extension UITextField {
-    
-    func useUnderline() {
-        
-        let border = CALayer()
-        let borderWidth = CGFloat(1.0)
-        border.borderColor = UIColor.gray.cgColor
-        border.frame = CGRect(x: 0, y: self.frame.size.height - borderWidth, width: self.frame.size.width, height: self.frame.size.height)
-        border.borderWidth = borderWidth
-        self.layer.addSublayer(border)
-        self.layer.masksToBounds = true
     }
 }
 

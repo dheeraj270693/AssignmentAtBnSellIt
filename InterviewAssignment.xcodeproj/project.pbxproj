@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		48A21B0E60AAEA499F1E9DBF /* Pods_InterviewAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5F75B260B7E14E0168DC580 /* Pods_InterviewAssignment.framework */; };
 		76A2F66179FA9E1D0B2394A3 /* Pods_InterviewAssignment_InterviewAssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F8EFA78965F3D3616E11BEE /* Pods_InterviewAssignment_InterviewAssignmentUITests.framework */; };
+		A2A052F1279C611400D18D2F /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A052F0279C611400D18D2F /* UITextField.swift */; };
 		A2B98F7A27959A8B0050D782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F7927959A8B0050D782 /* AppDelegate.swift */; };
 		A2B98F7C27959A8B0050D782 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B98F7B27959A8B0050D782 /* SceneDelegate.swift */; };
 		A2B98F8327959A8D0050D782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B98F8227959A8D0050D782 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		3F8270EB9B235912097749BF /* Pods-InterviewAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewAssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-InterviewAssignmentTests/Pods-InterviewAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		42EF826667AC732FC0CAD9D0 /* Pods-InterviewAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewAssignment.debug.xcconfig"; path = "Target Support Files/Pods-InterviewAssignment/Pods-InterviewAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		6F0E1128C5CC6E973D68B08C /* Pods-InterviewAssignment-InterviewAssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InterviewAssignment-InterviewAssignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-InterviewAssignment-InterviewAssignmentUITests/Pods-InterviewAssignment-InterviewAssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A2A052F0279C611400D18D2F /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		A2B98F7627959A8B0050D782 /* InterviewAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B98F7927959A8B0050D782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2B98F7B27959A8B0050D782 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				A2E60A4A279BBF9400AF8C0D /* UIImage.swift */,
+				A2A052F0279C611400D18D2F /* UITextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				A2B98FF327959E200050D782 /* ConnectionHelper.swift in Sources */,
 				A2B98FF927959E400050D782 /* ManageInventoryModel.swift in Sources */,
 				A2E60A3B279BB94200AF8C0D /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
+				A2A052F1279C611400D18D2F /* UITextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

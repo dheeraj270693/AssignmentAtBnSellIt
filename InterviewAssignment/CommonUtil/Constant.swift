@@ -10,7 +10,6 @@ import Foundation
 struct Constants {
     
     static let VIEW_CORNER_RADIUS = 10
-    
     static let BUTTON_CORNER_RADIUS = 8;
     
     static let categoryUrl = "https://devapi.bnsellit.com:8000/categories"

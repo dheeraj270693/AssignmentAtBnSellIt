@@ -11,7 +11,7 @@
         <!--Manage Inventory-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ManageInventoryViewController" customModule="InterviewAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ManageInventoryViewController" id="BYZ-38-t0r" customClass="ManageInventoryViewController" customModule="InterviewAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -210,7 +210,7 @@
         <!--Add New Inventory-->
         <scene sceneID="Gyw-N3-Eos">
             <objects>
-                <viewController id="UDT-9U-Sbg" customClass="AddInventoryViewController" customModule="InterviewAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddInventoryViewController" id="UDT-9U-Sbg" customClass="AddInventoryViewController" customModule="InterviewAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XuY-T0-iAE">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="928"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -495,6 +495,7 @@
                         <outlet property="addImageButton" destination="QSo-Ec-ste" id="VaI-mu-3Ol"/>
                         <outlet property="addNewInventoryButton" destination="jt4-B4-TdT" id="th4-vg-aqy"/>
                         <outlet property="categoryTextLabel" destination="fej-Pb-T8L" id="MEa-LZ-p6b"/>
+                        <outlet property="categoryView" destination="8EQ-Hn-W9P" id="qcC-Y5-IcT"/>
                         <outlet property="curvedView" destination="8gt-hl-pv6" id="Vfj-Kd-GpT"/>
                         <outlet property="descriptionTextView" destination="1Iv-wQ-oxi" id="JSJ-IX-y4R"/>
                         <outlet property="inventoryTitleTextField" destination="2b3-fy-AzP" id="5h9-ss-oNf"/>
